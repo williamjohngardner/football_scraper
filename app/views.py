@@ -5,7 +5,7 @@ from django.http import HttpResponse
 
 
 def player_stat_view(request):
-    player = request.GET.get("player") or "drew brees"
+    player = request.GET.get("player") or "joe flacco"
     url = "http://www.nfl.com/search?query={}".format(player)
     content = requests.get(url).text
     souper = BeautifulSoup(content, "html.parser")

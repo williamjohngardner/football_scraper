@@ -1,17 +1,23 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static "app/css/bootstrap.css" %}" media="screen" charset="utf-8">
     <title>NFL Scraper</title>
   </head>
   <body>
-    <form class="" action="">
-        <input type="text" name="player" value="">
-        <input type="submit" value="Search">
-    </form>
-    {% autoescape off %}
-      {{player_stats}}
-    {% endautoescape %}
+    <div class="container">
+      <form class="" action="">
+          <pre>
+            <label><h5>Player Search</h5></label>  <input type="text" name="player"><br>
+            <input class="btn btn-primary" type="submit" value="Search">
+          </pre>
 
+      </form>
+      {% autoescape off %}
+        <h5>{{player_stats}}</h5>
+      {% endautoescape %}
+    </div>
   </body>
 </html>
