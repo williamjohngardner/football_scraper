@@ -15,9 +15,12 @@
           </pre>
 
       </form>
-      {% autoescape off %}
-        <h5>{{player_stats}}</h5>
-      {% endautoescape %}
+      <table class='table-striped'>
+        {% autoescape off %}
+          <h5>{{player_stats}}</h5>
+        {% endautoescape %}
+      </table>
+
     </div>
   </body>
 </html>
